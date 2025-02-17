@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025년 03월 점괘</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="bg-white shadow-lg rounded-2xl p-8 max-w-lg w-full text-center">
+        <h1 class="text-2xl font-bold text-gray-800">2025년 03월 점괘</h1>
+        <p class="mt-2 text-gray-600">숫자를 선택하여 이번 달의 점괘를 확인하세요.</p>
+        
+        <div class="mt-6 grid grid-cols-2 gap-4">
+            <button class="py-3 px-6 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 transition" onclick="showTarot(1)">1</button>
+            <button class="py-3 px-6 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 transition" onclick="showTarot(2)">2</button>
+            <button class="py-3 px-6 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 transition" onclick="showTarot(3)">3</button>
+            <button class="py-3 px-6 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 transition" onclick="showTarot(4)">4</button>
+        </div>
+        
+        <div id="result" class="mt-6 text-lg text-gray-700 font-medium leading-relaxed text-left"></div>
+    </div>
+    
+    <script>
+        function showTarot(number) {
+            const tarotReadings = {
+                1: `📌 <b>초반:</b><br> 새로운 인간관계가 시작되거나 기존 관계가 깊어지는 시기입니다. 감정적으로 안정감을 느끼며, 연애나 우정에서 기쁜 일이 있을 수 있습니다. 새로운 프로젝트나 창작 활동이 시작될 가능성도 있습니다.<br><br>
+                📌 <b>중반:</b><br> 새로운 도전과 행동이 강조됩니다. 호기심과 열정이 넘치며, 새로운 목표를 발견할 수 있습니다. 다만 경험 부족으로 어려움을 겪을 수 있으니, 꾸준한 실행력이 필요합니다.<br><br>
+                📌 <b>후반:</b><br> 안정감과 성취가 강해집니다. 한 달 동안의 노력이 결실을 맺으며, 인간관계와 프로젝트에서 성과를 거둘 가능성이 큽니다. 가족, 친구들과 즐거운 시간을 보내거나 중요한 시험에서 좋은 결과를 기대할 수 있습니다.`,
+                
+                2: `📌 <b>초반:</b><br> 성취감과 자신감을 얻을 일이 생깁니다. 노력한 일이 좋은 평가를 받고, 주변으로부터 인정받을 가능성이 큽니다. 사회적으로 주목받을 기회도 올 수 있습니다.<br><br>
+                📌 <b>중반:</b><br> 내면의 힘과 인내심이 중요한 시기입니다. 감정을 잘 다스리고, 갈등을 부드럽게 해결해야 할 수도 있습니다. 꾸준한 노력과 자기 확신이 필요합니다.<br><br>
+                📌 <b>후반:</b><br> 현실적인 목표를 향해 차근차근 나아갑니다. 감정보다는 실질적인 성과에 집중해야 하며, 재정적, 직업적으로 안정적인 기반을 다질 수 있는 시기입니다.`,
+                
+                3: `📌 <b>초반:</b><br> 감정적으로 균형을 유지하며 성숙한 태도가 필요합니다. 인간관계에서 조언을 구하거나 리더십을 발휘해야 할 수도 있습니다.<br><br>
+                📌 <b>중반:</b><br> 인내와 새로운 관점이 필요한 시기입니다. 답답함을 느낄 수 있지만, 새로운 방향을 찾을 수 있는 기회가 올 것입니다.<br><br>
+                📌 <b>후반:</b><br> 안정과 성취가 강하게 나타납니다. 축하할 일이 생길 가능성이 높으며, 인간관계에서 긍정적인 변화가 있을 것입니다.`,
+                
+                4: `📌 <b>초반:</b><br> 혼자만의 시간이 필요하며, 깊이 고민하는 시기가 될 수 있습니다. 내면의 성찰을 통해 자신이 원하는 방향을 탐색할 필요가 있습니다.<br><br>
+                📌 <b>중반:</b><br> 중요한 인간관계가 강조됩니다. 조화로운 관계와 협력이 형성될 가능성이 크며, 연애나 업무에서 긍정적인 변화가 나타날 수 있습니다.<br><br>
+                📌 <b>후반:</b><br> 노력의 결실을 기다려야 하는 시기입니다. 조급한 결정을 내리기보다, 차분하게 장기적인 목표를 점검하는 것이 중요합니다.`
+            };
+            
+            document.getElementById("result").innerHTML = tarotReadings[number] || "점괘를 찾을 수 없습니다.";
+        }
+    </script>
+</body>
+</html>
